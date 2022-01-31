@@ -1,84 +1,118 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
- *
- * This class was written as an early example for teaching Java with BlueJ.
+ * The image being represented is of a man travelling on a boat,  
+ * heading towards the strange island with the mutated red coconuts.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Gunnar Hunt
+ * @version 01.30.2022
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
-    private boolean drawn;
+    private Person boatguy;
+    private Square boat;
+    private Circle coconut1;
+    private Circle coconut2;
+    private Square seaground;
+    private Triangle islandpt1;
+    private Triangle islandpt2;
+    private Circle suncorner;
+    private Triangle leaftriangle;
+    private Triangle treetriangle;
+    private Circle theactualsun;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
-        drawn = false;
+        boat = new Square();
+        boatguy = new Person();
+        coconut1 = new Circle();
+        coconut2 = new Circle();	
+        seaground = new Square();	
+        islandpt1 = new Triangle();
+        islandpt2 = new Triangle();
+        suncorner= new Circle();
+        leaftriangle = new Triangle();	
+        treetriangle = new Triangle();
+        theactualsun = new Circle();	
     }
 
     /**
      * Draw this picture.
      */
     public void draw()
-    {
-        if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
-            
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
-            drawn = true;
-        }
-    }
+    {  
+        boatguy.changeColor("black");
+        boatguy.moveHorizontal(60);
+        boatguy.moveVertical(30);
+        boatguy.makeVisible();
+        
 
-    /**
-     * Change this picture to black/white display
-     */
-    public void setBlackAndWhite()
-    {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
-    }
+        boat.changeColor("red");
+        boat.moveHorizontal(310);
+        boat.moveVertical(160);
+        boat.makeVisible();
+      
 
-    /**
-     * Change this picture to use color display
-     */
-    public void setColor()
-    {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        coconut1.changeColor("red");
+        coconut1.moveHorizontal(200);
+        coconut1.moveVertical(90);
+        coconut1.changeSize(20);
+        coconut1.makeVisible();
+        
+
+        coconut2.changeColor("red");
+        coconut2.moveHorizontal(240);
+        coconut2.moveVertical(90);
+        coconut2.changeSize(20);
+        coconut2.makeVisible();
+        
+        treetriangle.changeColor("black");
+        treetriangle.moveHorizontal(230);
+        treetriangle.moveVertical(86);
+        treetriangle.changeSize(50,25);
+        treetriangle.makeVisible();
+        
+
+        leaftriangle.changeColor("green");
+        leaftriangle.moveHorizontal(230);
+        leaftriangle.moveVertical(75);
+        leaftriangle.changeSize(25,75);
+        leaftriangle.makeVisible();
+        
+
+        theactualsun.changeColor("yellow");
+        theactualsun.moveHorizontal(20);
+        theactualsun.moveVertical(10);
+        theactualsun.changeSize(68);
+        theactualsun.makeVisible();
+        
+
+        seaground.changeColor("blue");
+        seaground.moveHorizontal(0);
+        seaground.moveVertical(180);
+        seaground.changeSize(5000);
+        seaground.makeVisible();
+        
+
+        islandpt1.changeColor("yellow");
+        islandpt1.moveHorizontal(250);
+        islandpt1.moveVertical(140);
+        islandpt1.changeSize(100,100);
+        islandpt1.makeVisible();
+        
+
+        islandpt2.changeColor("yellow");
+        islandpt2.moveHorizontal(-320);
+        islandpt2.moveVertical(75);
+        islandpt2.changeSize(100,100);
+        islandpt2.makeVisible();
+       
+
+        suncorner.changeColor("green");
+        suncorner.moveHorizontal(204);
+        suncorner.moveVertical(130);
+        suncorner.changeSize(50);
+        suncorner.makeVisible();
     }
 }
