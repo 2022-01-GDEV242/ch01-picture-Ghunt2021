@@ -109,10 +109,51 @@ public class Picture
         islandpt2.makeVisible();
        
 
-        suncorner.changeColor("green");
+        suncorner.changeColor("yellow");
         suncorner.moveHorizontal(204);
         suncorner.moveVertical(130);
         suncorner.changeSize(50);
         suncorner.makeVisible();
+    }    /**
+     * Change this picture to black/white display
+     */
+    public void setBlackAndWhite()
+    {
+        if (sky1 != null)   // only if it's painted already...
+        {
+            boatguy.changeColor("black");
+            boat.changeColor("grey");
+            coconut1.changeColor("grey");
+            coconut2.changeColor("grey");
+            seaground.changeColor("black");
+            islandpt1.changeColor("grey");
+            islandpt2.changeColor("grey");
+            suncorner.changeColor("grey");
+            leaftriangle.changeColor("black");
+            treetriangle.changeColor("black");
+            theactualsun.changeColor("grey");
+        }
+    }
+
+    /**
+     * Change this picture to use color display
+     */
+    public void setColor()
+    {
+        if (sky1 != null)   // only if it's painted already...
+        {
+            boatguy.changeColor("black");
+            boat.changeColor("blue");
+            coconut1.changeColor("red");
+            coconut2.changeColor("red");
+            seaground.changeColor("blue");
+            islandpt1.changeColor("yellow");
+            islandpt2.changeColor("yellow");
+            suncorner.changeColor("yellow");
+            leaftriangle.changeColor("green");
+            treetriangle.changeColor("black");
+            theactualsun.changeColor("yellow");
+        }
     }
 }
+
